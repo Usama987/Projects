@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <table border = 1>
+        <tr>
+                <td><b>Cust_ID</b></td>
+                <td><b>Churn</b></td>
+        </tr>
+         {% for i,j in result %}
+            <tr>
+               <td> {{ i }} </td>
+               <td> {{ j }}</td>
+            </tr>
+         {% endfor %}
+      </table>
+</body>
+</html>
