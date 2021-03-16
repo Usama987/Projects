@@ -1,0 +1,16 @@
+<html>
+                           <body>
+      <table border = 1>
+            <tr>
+                <td><b>Names</b></td>
+                <td><b>Review</b></td>
+            </tr>
+         {% for i,j in result %}
+            <tr>
+               <td> {{ i }} </td>
+               <td> {{ j }}</td>
+            </tr>
+         {% endfor %}
+      </table>
+   </body>
+</html>

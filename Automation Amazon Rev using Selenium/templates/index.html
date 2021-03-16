@@ -1,0 +1,18 @@
+<html>
+<head>
+    <title>Amazon Reviews</title>
+</head>
+<body>
+    <form method="post" action="{{ url_for('review')}}">
+        <input type="text" placeholder="Product" name="prod">
+        <button type="submit">Submit</button>
+    </form>
+    <div>
+           <form action ="{{ url_for('predict1') }}" method="post" enctype="multipart/form-data">
+                <textarea name="msg" placeholder="Message"></textarea>
+                <input type="file" id="file" name="file" accept="cs">
+                <input type="submit">
+            </form>
+    </div>
+</body>
+</html>
