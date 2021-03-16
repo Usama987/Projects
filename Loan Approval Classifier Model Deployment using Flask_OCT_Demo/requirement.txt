@@ -1,0 +1,15 @@
+Flask==1.1.1
+gunicorn==19.9.0
+Jinja2==2.10.1
+MarkupSafe==1.1.1
+Werkzeug==0.15.5
+numpy>=1.9.2
+scikit-learn>=0.18
+pandas>=0.19
+Flask==1.1.1
+htmlmin==0.1.12
+httplib2==0.15.0
+requests==2.11.1
+requests-toolbelt==0.7.0
+virtualenv==16.7.8
+

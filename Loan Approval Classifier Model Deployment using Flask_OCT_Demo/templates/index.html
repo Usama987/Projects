@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+
+<head>
+  <title>NeuEra AI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+ <div class="jumbotron text-center" style="background-color:#2196F3;color:#fff;height:200px;">
+  <h1><b>NeuEra AI Software & Analytics</b></h1>
+  <h3><b>Loan Approval Classifier</b></h3>
+</div>
+ <div class="container">
+	<h1>UNDER WRITER DECISION:</h1>
+     <h2>Loan Approved or Declined</h2>
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+        <div class="col-sm-3">
+    	<form action="{{ url_for('predict')}}" method="post">
+    	<input class="form-control" id="ex1" type="text" data-toggle="tooltip" title="Please enter only Numeric values" name="Gender" placeholder="Gender" required="required" />
+        <input class="form-control" id="ex2" type="text" data-toggle="tooltip" title="Please enter only Numeric values!" name="Married" placeholder="Marrial Status" required="required" />
+		<input class="form-control" id="ex3" type="text" data-toggle="tooltip" title="Please enter only Numeric values!" name="Dependents" placeholder="Dependents" required="required" />
+        <input class="form-control" id="ex4" type="text" data-toggle="tooltip" title="Please enter only Numeric values!" name="Education" placeholder="Educated or Not" required="required" />
+        <input class="form-control" id="ex5" type="text" data-toggle="tooltip" title="Please enter only Numeric values in the range 0:4!" name="Self_Employed" placeholder="Self_Employed or Not" required="required" />
+        <input class="form-control" id="ex6" type="text" data-toggle="tooltip" title="Please enter 0 for no and 1 for yes!" name="ApplicantIncome" placeholder="ApplicantIncome" required="required" />
+        <input class="form-control" id="ex7" type="text" data-toggle="tooltip" title="Please enter 0 for no and 1 for yes" name="CoapplicantIncome" placeholder="CoapplicantIncome" required="required" />
+        <input class="form-control" id="ex7" type="text" data-toggle="tooltip" title="Please enter 0 for no and 1 for yes" name="Loan_Amount" placeholder="Loan_Amount" required="required" />
+        <input class="form-control" id="ex7" type="text" data-toggle="tooltip" title="Please enter 0 for no and 1 for yes" name="Loan_Amount_Term" placeholder="Loan_Amount_Term" required="required" />
+        <input class="form-control" id="ex7" type="text" data-toggle="tooltip" title="Please enter 0 for no and 1 for yes" name="Credit_History" placeholder="Credit_History" required="required" />
+        <input class="form-control" id="ex7" type="text" data-toggle="tooltip" title="Please enter 0 for no and 1 for yes" name="Property_Area" placeholder="Property_Area" required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+
+    </form>
+        </div>
+         <br>
+   <br><div>
+ <h1>  {{ prediction_text }} </h1>
+</div>
+    </form>
+
+
+ </div>
+</body>
+</html>
